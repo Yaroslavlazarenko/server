@@ -16,7 +16,7 @@ $deleteButton.addEventListener('click', async function () {
 
     //request information
     const information = {
-        id: ((window.location.href).slice(-1))
+        id: parseInt((window.location.href).toString().split("=")[1])
     };
 
     //sending a request

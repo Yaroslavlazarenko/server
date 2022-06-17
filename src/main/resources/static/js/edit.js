@@ -103,7 +103,7 @@ $editBtn.addEventListener('click', async function () {
         hoursLaboratory: (editedHoursLaboratory),
         nameTeacher: (editedNameTeacher),
         nameAssistants: (editedNameAssistants).toString(),
-        id: ((window.location.href).slice(-1))
+        id: parseInt((window.location.href).toString().split("=")[1])
     };
 
     try {

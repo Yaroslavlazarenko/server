@@ -22,13 +22,11 @@ public class Security extends WebSecurityConfigurerAdapter {
         BufferedReader br = new BufferedReader(new FileReader("src/main/java/com/example/password.txt"));
         String currentPassword = br.readLine();
         br.close();
-        auth.inMemoryAuthentication().withUser("admin").password(currentPassword).roles(new String[]{"ADMIN"});
+        auth.inMemoryAuthentication().withUser("admin").password(currentPassword).roles("ADMIN");
     }
 
-
-
     protected void configure(HttpSecurity http) throws Exception {
-        ((HttpSecurity)((AuthorizedUrl)((HttpSecurity)((HttpSecurity)http.csrf().disable()).cors().disable()).authorizeRequests().antMatchers(new String[]{"/**"})).hasRole("ADMIN").and()).formLogin();
+        ((HttpSecurity)((AuthorizedUrl) http.csrf().disable().cors().disable().authorizeRequests().antMatchers(new String[]{"/**"})).hasRole("ADMIN").and()).formLogin();
     }
 
     @Bean
