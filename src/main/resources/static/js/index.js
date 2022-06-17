@@ -115,7 +115,7 @@ $selectFilters.addEventListener('change', () => {
     //search academic disciplines not provided with teaching staff
     if ($selectFilters.value === 'withoutTeachers') {
         for (let i = 0; i < database.length; i++) {
-            if ((database[i].nameTeacher).split("").length === 0) {
+            if ((database[i].nameTeacher.search("Null".trim()) === 0)) {
                 $dataList[i].classList.remove("hide");
             } else {
                 $dataList[i].classList.add("hide");
@@ -141,10 +141,10 @@ $selectFilters.addEventListener('change', () => {
                     infoTotalHours = database[i].houresSubjectLecturesPracticalLaboratory[0] +
                         database[i].houresSubjectLecturesPracticalLaboratory[1] +
                         database[i].houresSubjectLecturesPracticalLaboratory[2];
-                    for (let j = 1; j < database.length; j++) {
-                        if (database[1].nameTeacher === database[j].nameTeacher) {
+                    for (let j = i+1; j < database.length; j++) {
+                        if (database[i].nameTeacher === database[j].nameTeacher) {
                             infoCourseNames += database[j].courseName + '\; ';
-                            infoTotalHours = database[j].houresSubjectLecturesPracticalLaboratory[0] +
+                            infoTotalHours += database[j].houresSubjectLecturesPracticalLaboratory[0] +
                                 database[j].houresSubjectLecturesPracticalLaboratory[1] +
                                 database[j].houresSubjectLecturesPracticalLaboratory[2];
                         }
@@ -157,6 +157,7 @@ $selectFilters.addEventListener('change', () => {
                         'Суммарное количество часов нагрузки: ' +
                         infoTotalHours + '</br>' +
                         '</div>';
+                    infoTotalHours = 0;
                 }
             }
         }

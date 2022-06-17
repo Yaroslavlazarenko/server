@@ -27,7 +27,6 @@ let id = -1;
 //constants
 const regex = /[.?!)(,:_\n\t]/g;
 const regexNumber = /[?!)(,:_A-Za-zа-яА-ЯЁёІіЇїҐґЄє\n\t\s']/g;
-const regexContract = /[?!).(,:_A-Za-zа-яА-ЯЁёІіЇїҐґЄє\n\t\s']/g;
 const url = 'http://localhost:8080/add/added';
 
 $backBtn.addEventListener('click', function () {
@@ -101,6 +100,7 @@ $addBtn.addEventListener('click', async function () {
     };
 
     $success.addEventListener('click', function () {
+        document.location.href = 'index';
         $success.classList.add("hide");
     });
 
