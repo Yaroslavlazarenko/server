@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+}
+
+.container{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    background-color: rgba(140,239,207,0.27);
+}
+
+.recordsEditWrapper, .filtersWrapper, .searchChoiceWrapper, .searchWrapper, .informationFieldsContainer, .deleteSearch{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.recordsEditWrapper{
+    background-color: rgba(87,129,162,0.8);
+}
+
+.recordsEditWrapper button, .deleteSearch button{
+    display: block;
+    height: 40px;
+    width: 150px;
+    margin: 20px 20px 20px 20px;
+    font-weight: bold;
+    outline: 0;
+    border-radius: 4px;
+    padding: 0;
+    text-transform: uppercase;
+    background-color: rgba(107,120,239,0.38)
+}
+
+.filtersWrapper h2, .searchChoiceWrapper h2{
+    margin: 0 10px 0 0;
+}
+
+.sort{
+    width: 263px;
+}
+
+.searchFilters{
+    width: 410px;
+}
+
+.sort, .searchFilters{
+    display: block;
+    height: 40px;
+    margin: 20px 0 20px 0;
+    outline: 0;
+    border-radius: 4px;
+    padding: 0;
+}
+
+.searchWrapper input, .deleteSearch input{
+    display: block;
+    margin: 10px auto;
+    height: 35px;
+    width: 520px;
+    outline: 0;
+    border-radius: 4px;
+}
+
+.hide{
+    display: none;
+}
+
+.informationFieldsContainer .course,.informationFieldsContainer .teacher{
+    padding: 10px;
+    width: 25%;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    border: 2px;
+    background-color: rgba(87,129,162,0.16);
+}
+
+.informationFieldsContainer .course .hide,.informationFieldsContainer .teacher .hide{
+    display: none;
+}
+
+
+.deleteWrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.objectWrapper{
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.delete{
+    background-color: rgba(243,115,115,0.6);
+    border-radius: 5px;
+    border: 1px;
+}
+
+option{
+    width: 100px;
+}
+
+.deleteSearch{
+    height: 100px;
+    background-color: rgba(140,239,207,0.27);
+}
+
+.informationFieldsContainer{
+    background-color:rgba(140,239,207,0.27);
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.linksCourseWrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.linksCourseWrap a{
+    width: 50%;
+    height: 10px;
+    background-color: rgba(58,54,54,0.94);
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom:15px;
+    border-radius: 2px;
+    text-align: center;
+    margin-bottom: 10px;
+}

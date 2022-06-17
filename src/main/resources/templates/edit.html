@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/edit.css" th:href="@{/css/edit.css}" rel="stylesheet"/>
+    <title>Document</title>
+</head>
+<body>
+<div class="success hide">
+    <div class="textWrapper">
+        <p>ИЗМЕНЕНО</p>
+    </div>
+</div>
+<div class="container">
+    <h2>Изменить учебную дисциплину</h2>
+    <div class="informationWrapper">
+        <label><input id="courseName" placeholder="Название курса/спецкурса"></label>
+        <label><input id="courseCode" placeholder="Шифр курса/спецкурса"></label>
+        <label><input id="faculty" placeholder="Факультет"></label>
+        <label><input id="numbCourse" placeholder="Номер курса студентов"></label>
+        <label><input id="group" placeholder="Номер группы студентов"></label>
+        <label><input id="hoursLectures" placeholder="Общее время лекций"></label>
+        <label><input id="hoursPractical" placeholder="Общее время практических"></label>
+        <label><input id="hoursLaboratory" placeholder="Общее время лабораторных"></label>
+        <label><input id="nameTeacher" placeholder="ФИО преподавателя"></label>
+        <label><input id="nameAssistants" placeholder="ФИО ассистентов"></label>
+    </div>
+    <div class="buttonsWrapper">
+        <button id="confirmEditButton" class="edit">Изменить</button>
+        <button id="backButton" class="back">Назад</button>
+    </div>
+    <div class="databaseInfo hide" th:text="${dbObject}"></div>
+</div>
+<script src="../static/js/edit.js" th:src="@{/js/edit.js}"></script>
+</body>
+</html>

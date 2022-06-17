@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/delete.css" th:href="@{/css/delete.css}" rel="stylesheet"/>
+    <title>Document</title>
+</head>
+<body>
+<div class="success hide">
+    <div class="textWrapper">
+        <p>УДАЛЕНО</p>
+    </div>
+</div>
+<div class="container">
+    <h2>Удалить?</h2>
+    <div class="buttonsWrapper">
+        <button id="confirmDeleteButton" class="delete">Удалить</button>
+        <button id="backButton" class="back">Назад</button>
+    </div>
+</div>
+<script src="../static/js/delete.js" th:src="@{/js/delete.js}"></script>
+</body>
+</html>

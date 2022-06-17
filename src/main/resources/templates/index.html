@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet"/>
+    <title>Document</title>
+</head>
+
+<body>
+<div class="deleteWrapper hide">
+    <div class="deleteSearch">
+        <input type="text" id="deleteSearch" class="deleteSearch" placeholder="Название курса/спецкурса">
+        <button class="back">Назад</button>
+    </div>
+</div>
+<div class="container">
+    <div class="recordsEditWrapper">
+        <button id="addButton" class="add">Добавить запись</button>
+        <button id="deleteButton" class="keepDelete">Удалить запись</button>
+    </div>
+    <div class="filtersWrapper">
+        <h2>Выдача информации о:</h2>
+        <select name="filters" id="filters" class="sort">
+            <option value="none" class=""></option>
+            <option value="withoutTeachers" class="">Учебных дисциплинах, не обеспеченных преподавательскими кадрами
+            </option>
+            <option value="totalWorkloadTeachers" class="">Общей нагрузке преподавателей</option>
+            <option value="subjectHours" class="">Предметах, в которых суммарное кол-во часов, отводимых на практические
+                и лабораторные занятия, меньше лекционных часов
+            </option>
+        </select>
+    </div>
+    <div class="searchChoiceWrapper">
+        <h2>Поиск по:</h2>
+        <select name="searchFilters" id="" class="searchFilters">
+            <option value="courseName">названию курса/спецкурса</option>
+            <option value="courseCode">шифру курса/спецкурса</option>
+            <option value="faculty">факультету</option>
+            <option value="numbCourse">номеру курса студентов</option>
+            <option value="group">номеру группы студентов</option>
+            <option value="hoursLectures">количеству лекционных часов</option>
+            <option value="hoursPractical">количеству практических часов</option>
+            <option value="hoursLaboratory">количеству лабораторных часов</option>
+            <option value="nameTeacher">фамилия преподавателя</option>
+            <option value="nameAssistants">фамилии ассистента</option>
+        </select>
+    </div>
+    <div class="searchWrapper">
+        <label for="search"></label><input type="text" id="search" class="search" placeholder="Введите ">
+    </div>
+    <div class="hide">
+        <button class="editClass"></button>
+    </div>
+    <div class="courses"></div>
+</div>
+<div class="informationFieldsContainer">
+
+</div>
+<script src="../static/js/index.js" th:src="@{/js/index.js}"></script>
+</body>
+
+</html>
